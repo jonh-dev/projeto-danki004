@@ -53,6 +53,7 @@ nav .menu li{
 }
 
 nav .menu a{
+    color: black;
     display: block;
     padding: 8px;
 }
