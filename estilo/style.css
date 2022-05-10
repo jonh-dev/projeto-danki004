@@ -66,6 +66,7 @@ nav.mobile .hamburg{
     margin-right: 5px;
     width: 31px;
     height: 29px;
+    cursor: pointer;
 }
 
 nav.mobile ul{
@@ -100,7 +101,11 @@ nav.mobile li:hover{
 /* Mosaico */
 
 .mosaico .center{
-    max-width: none;
+    max-width: 100%;
+}
+
+.mosaico .slick-slider{
+    margin: 0;
 }
 
 .mosaico-single{
@@ -125,10 +130,11 @@ section.servicos{
 }
 
 section.servicos > .center{
-    max-width: 1259px;
+    max-width: 1262px;
     display: flex;
     align-items: center;
     position: relative;
+    left: 2px;
     top: -46px;
     text-align: center;
 }
@@ -286,9 +292,12 @@ section.tratamento{
 }
 
 section.tratamento .center{
-    display: flex;
-    justify-content: space-between;
+    max-width: 100%;
     padding: 0 10px;
+}
+
+section.tratamento .slick-slide{
+    margin: 0 15px;
 }
 
 section.tratamento .tratamento-container1{
@@ -344,7 +353,7 @@ section.depoimentos .center h2{
 }
 
 section.depoimentos .depoimentos-single{
-    max-width: 100%;
+    max-width: 50%;
     width: 600px;
     padding: 0 15px;
     margin-top: 50px;
@@ -602,6 +611,43 @@ footer a:hover{
 
 /*****/
 
+/*  Estilo para o plugin Slick Slide  */
+
+    .slick-dotted ul{
+        list-style: none;
+        text-align: center;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    .slick-dotted li{
+        display: inline-block;
+        margin: 0 7px;
+    }
+
+    .slick-dotted button:focus{
+        outline: 0;
+    }
+
+    .slick-dotted li button{
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+        color: #d8d8d8;
+        border-width: 0;
+        background: #d8d8d8;
+        cursor: pointer;
+    }
+
+    li.slick-active button{
+        background: #688293;
+        color: #688293;
+    }
+
+    .slick-slide:focus{outline: none;}
+
+/*****/
+
 /*  Responsivo */
 
  @media screen and (max-width: 1252px){
@@ -715,6 +761,14 @@ footer a:hover{
         display: inline-block;
     }
 
+    /* Plugin Slick */
+
+    .slick-slide{
+        margin: 0;
+    }
+
+    /*****/
+
     section.tratamento .tratamento-container1{
         width: 100%;
         padding: 0 30px;
@@ -732,6 +786,10 @@ footer a:hover{
         width: 100%;
         padding: 0 30px;
         text-align: center;
+    }
+
+    section.depoimentos .depoimentos-single{
+        max-width: 100%;
     }
 
     section.mosaico-social .center{
@@ -754,5 +812,9 @@ footer a:hover{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
     }
  }
